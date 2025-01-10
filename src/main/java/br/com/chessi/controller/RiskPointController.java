@@ -1,7 +1,7 @@
 package br.com.chessi.controller;
 
 import br.com.chessi.model.Product;
-import br.com.chessi.service.RiskPointPipeline;
+import br.com.chessi.service.RiskPointCalculatorService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/risk-point")
 public class RiskPointController {
 
-    private final RiskPointPipeline riskPointPipeline;
+    private final RiskPointCalculatorService riskPointPipeline;
 
-    public RiskPointController(RiskPointPipeline riskPointPipeline) {
+    public RiskPointController(RiskPointCalculatorService riskPointPipeline) {
         this.riskPointPipeline = riskPointPipeline;
     }
 
